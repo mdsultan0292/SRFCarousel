@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eDR-K3-qDA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CarouselVC-->
+        <scene sceneID="Dlm-Qz-31e">
+            <objects>
+                <viewController storyboardIdentifier="SRFCarouselVC" id="eDR-K3-qDA" customClass="SRFCarouselVC" customModule="SRFCarousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vg3-6S-fiI"/>
+                        <viewControllerLayoutGuide type="bottom" id="R1Q-qJ-KoC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0EF-4S-r82">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1x5-MV-MJu">
+                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="xEC-ws-Ohz"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eKn-Ou-DLX">
+                                <rect key="frame" x="10" y="89" width="394" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t1-aT-G1N">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="40"/>
+                                        <state key="normal" title="1 Item"/>
+                                        <connections>
+                                            <action selector="singleItemBtnTap:" destination="eDR-K3-qDA" eventType="touchUpInside" id="pPv-ou-fyO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7j-dj-Kzw">
+                                        <rect key="frame" x="101" y="0.0" width="91" height="40"/>
+                                        <state key="normal" title="2 Item"/>
+                                        <connections>
+                                            <action selector="doubleItemBtnTap:" destination="eDR-K3-qDA" eventType="touchUpInside" id="AKK-fQ-HfX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yOi-Qm-o09">
+                                        <rect key="frame" x="202" y="0.0" width="91" height="40"/>
+                                        <state key="normal" title="More than 3 Item"/>
+                                        <connections>
+                                            <action selector="multipleItemBtnTap:" destination="eDR-K3-qDA" eventType="touchUpInside" id="Jfh-wL-bFE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Vzq-iz-hE0">
+                                        <rect key="frame" x="303" y="0.0" width="91" height="40"/>
+                                        <state key="normal" title="With Space"/>
+                                        <connections>
+                                            <action selector="withSpaceItemTap:" destination="eDR-K3-qDA" eventType="touchUpInside" id="LBI-TX-1BC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Xg-bP-icX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wIO-Al-mId" firstAttribute="trailing" secondItem="eKn-Ou-DLX" secondAttribute="trailing" constant="10" id="0Fv-FQ-eva"/>
+                            <constraint firstItem="eKn-Ou-DLX" firstAttribute="top" secondItem="Vg3-6S-fiI" secondAttribute="bottom" constant="45" id="5zq-VE-hMF"/>
+                            <constraint firstItem="eKn-Ou-DLX" firstAttribute="leading" secondItem="wIO-Al-mId" secondAttribute="leading" constant="10" id="8LT-ZY-Xf9"/>
+                            <constraint firstItem="1x5-MV-MJu" firstAttribute="leading" secondItem="0EF-4S-r82" secondAttribute="leading" id="Mes-ZH-2w9"/>
+                            <constraint firstAttribute="trailing" secondItem="1x5-MV-MJu" secondAttribute="trailing" id="kVA-Xi-mag"/>
+                            <constraint firstItem="1x5-MV-MJu" firstAttribute="centerY" secondItem="0EF-4S-r82" secondAttribute="centerY" id="mPE-SB-djR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wIO-Al-mId"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="1x5-MV-MJu" id="TKP-wi-Yxb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEz-qe-5qX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="-349"/>
+        </scene>
+    </scenes>
+</document>
